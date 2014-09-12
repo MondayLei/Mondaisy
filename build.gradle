@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'application'
-apply plugin: 'war'
+//apply plugin: 'application'
+//apply plugin: 'war'
 
 // tag::repositories[]
 repositories {
@@ -19,5 +19,29 @@ repositories {
 
 // tag::dependencies[]
 dependencies {
+	// Log4j
+	compile (
+		[group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.0.2'],
+		[group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.0.2'],
+		[group: 'org.apache.logging.log4j', name: 'log4j-web', version: '2.0.2']
+	)
+	// Spring
+	compile (
+        [group: 'org.springframework', name: 'spring-core', version: '4.1.0.RELEASE'],
+        [group: 'org.springframework', name: 'spring-context', version: '4.1.0.RELEASE'],
+        [group: 'org.springframework', name: 'spring-web', version: '4.1.0.RELEASE'],
+        [group: 'org.springframework', name: 'spring-webmvc', version: '4.1.0.RELEASE'],
+        [group: 'org.springframework', name: 'spring-aop', version: '4.1.0.RELEASE']
+    )
+	// Struts2
+	compile 'org.apache.struts:struts2-core:2.3.16.3'
+	// Hibernate
+	compile (
+		[group:'org.hibernate', name:'hibernate-core', version:'4.3.6.Final'],
+		[group:'org.hibernate', name:'hibernate-annotations', version:'3.5.6-Final'],
+		[group:'org.hibernate', name:'hibernate-entitymanager', version:'4.3.6.Final']
+	)
+	// MySQL Driver
+	compile 'mysql:mysql-connector-java:5.1.32'
 }
 // end::dependencies[]
