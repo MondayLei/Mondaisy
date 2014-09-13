@@ -13,10 +13,4 @@
 			<result name="SUCCESS">pages/welcome_user.jsp</result>
 		</action>
 	</package>
-
-	<package name="test" namespace="/Mondaisy" extends="struts-default">
-		<action name="Test">
-			<result>pages/welcome_user.jsp</result>
-		</action>
-	</package>
 </struts>
