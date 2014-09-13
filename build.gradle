@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 //apply plugin: 'application'
-//apply plugin: 'war'
+apply plugin: 'war'
 
 // tag::repositories[]
 repositories {
@@ -45,3 +45,9 @@ dependencies {
 	compile 'mysql:mysql-connector-java:5.1.32'
 }
 // end::dependencies[]
+
+// Copy to webapp/lib
+task copyJars(type: Copy) {
+  from configurations.runtime
+  into 'src/main/webapp/WEB-INF/lib' // Ä¿±êÎ»ÖÃ
+}
