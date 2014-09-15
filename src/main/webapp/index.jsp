@@ -6,16 +6,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login</title>
+<title>Welcome New Visitor</title>
+<META HTTP-EQUIV="Refresh" CONTENT="0;URL=user/login.action">
 </head>
 <body>
-	<h1>Struts 2 Hello World Example</h1>
-
-	<s:form action="welcome">
-		<s:textfield name="username" label="Username" />
-		<s:password name="password" label="Password" />
-		<s:submit />
-	</s:form>
-
+	Welcome
 </body>
 </html>

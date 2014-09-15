@@ -31,7 +31,6 @@ dependencies {
         [group: 'org.springframework', name: 'spring-context', version: '4.1.0.RELEASE'],
         [group: 'org.springframework', name: 'spring-web', version: '4.1.0.RELEASE'],
         [group: 'org.springframework', name: 'spring-webmvc', version: '4.1.0.RELEASE'],
-        [group: 'org.springframework', name: 'spring-aop', version: '4.1.0.RELEASE']
     )
 	// Struts2
 	compile 'org.apache.struts:struts2-core:2.3.16.3'
