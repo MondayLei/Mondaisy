@@ -5,15 +5,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Welcome!</title>
+<title>User Register Page</title>
 </head>
 <body>
-	<h1>Daisy Example</h1>
 
-	<h4>
-		Hello
-		<s:property value="username" />
-	</h4>
+	<s:form action="register">
+		<s:textfield name="user.username" label="UserName"></s:textfield>
+		<s:password name="user.password" label="Password"></s:password>
+		<s:password name="user.confirm" label="Confirm"></s:password>
+		<s:submit value="Join Now"></s:submit>
+	</s:form>
 
 </body>
 </html>

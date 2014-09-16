@@ -9,7 +9,7 @@
 <title>Login</title>
 </head>
 <body>
-	<h1>Struts 2 Hello World Example</h1>
+	<h1>Daisy</h1>
 
 	<s:form action="welcome">
 		<s:textfield name="username" label="Username" />

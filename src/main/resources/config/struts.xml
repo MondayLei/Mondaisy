@@ -14,9 +14,15 @@
 		</action>
 	</package>
 
-	<!-- <package name="default" extends="struts-default">
-		<action name="jumpToDefault">
+	<package name="topPages" namespace="/" extends="struts-default">
+		<action name="signUp">
 			<result type="redirectAction">user/login</result>
 		</action>
-	</package> -->
+		<action name="signIn">
+			<result type="redirectAction">user/login</result>
+		</action>
+	</package>
+
+	<!-- <package name="default" extends="struts-default"> <action name="jumpToDefault"> 
+		<result type="redirectAction">user/login</result> </action> </package> -->
 </struts>

@@ -7,9 +7,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome New Visitor</title>
-<META HTTP-EQUIV="Refresh" CONTENT="0;URL=user/login.action">
 </head>
 <body>
-	Welcome
+	Welcome To Mondaisy's World!
+	<s:form action="signUp" namespace="/">
+		<s:submit value="Register" />
+	</s:form>
+	<s:form action="signIn" namespace="/">
+		<s:submit value="Sign In" />
+	</s:form>
 </body>
 </html>
