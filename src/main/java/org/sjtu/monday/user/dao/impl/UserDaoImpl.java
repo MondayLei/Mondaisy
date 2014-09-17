@@ -3,6 +3,9 @@
  */
 package org.sjtu.monday.user.dao.impl;
 
+import java.util.List;
+
+import org.hibernate.SessionFactory;
 import org.sjtu.monday.user.dao.UserDao;
 import org.sjtu.monday.user.model.User;
 
@@ -17,24 +20,59 @@ import org.sjtu.monday.user.model.User;
 /**
  * @author Monday
  *
- * Sep 16, 2014
+ *         Sep 16, 2014
  */
 public class UserDaoImpl implements UserDao {
 
+	// Session factory injected by spring context
+	private SessionFactory sessionFactory;
+
 	/**
-	 * 
+	 * @return the sessionFactory
 	 */
-	public UserDaoImpl() {
-		// TODO Auto-generated constructor stub
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
 	}
 
-	/* (non-Javadoc)
-	 * @see org.sjtu.monday.user.dao.UserDao#addUser(org.sjtu.monday.user.model.User)
+	/**
+	 * @param sessionFactory
+	 *            the sessionFactory to set
+	 */
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.sjtu.monday.user.dao.UserDao#addUser(org.sjtu.monday.user.model.User)
 	 */
 	@Override
 	public void addUser(User user) {
-		// TODO Auto-generated method stub
+		this.sessionFactory.getCurrentSession().save(user);
+	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.sjtu.monday.user.dao.UserDao#login(org.sjtu.monday.user.model.User)
+	 */
+	@Override
+	public boolean login(User user) {
+		return true;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.sjtu.monday.user.dao.UserDao#getUserList()
+	 */
+	@Override
+	public List<User> getUserList() {
+		return this.sessionFactory.getCurrentSession().createQuery("from user")
+				.list();
 	}
 
 }
