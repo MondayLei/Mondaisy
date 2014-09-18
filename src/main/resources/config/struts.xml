@@ -13,6 +13,7 @@
 		e.g. In a demo, employee is deleted using URL /delete/10 This this is set 
 		to false; then struts will try to find mapping for URL "/10" instaed of "/delete/10" -->
 	<constant name="struts.enable.SlashesInActionNames" value="true" />
+	
 	<!-- Normal Action mappings are defined here -->
 	<package name="user" namespace="/user" extends="struts-default">
 		<action name="login">

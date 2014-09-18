@@ -31,6 +31,7 @@ dependencies {
         [group: 'org.springframework', name: 'spring-context', version: '4.1.0.RELEASE'],
         [group: 'org.springframework', name: 'spring-web', version: '4.1.0.RELEASE'],
         [group: 'org.springframework', name: 'spring-webmvc', version: '4.1.0.RELEASE'],
+        [group: 'org.springframework', name: 'spring-orm', version: '4.1.0.RELEASE'],
     )
 	// Struts2
 	compile 'org.apache.struts:struts2-core:2.3.16.3'
@@ -43,6 +44,9 @@ dependencies {
 	)
 	// MySQL Driver
 	compile 'mysql:mysql-connector-java:5.1.32'
+	
+	// Apache Commons Dbcp2
+	compile 'org.apache.commons:commons-dbcp2:2.0.1'
 }
 // end::dependencies[]
 
