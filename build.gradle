@@ -25,6 +25,8 @@ dependencies {
 		[group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.0.2'],
 		[group: 'org.apache.logging.log4j', name: 'log4j-web', version: '2.0.2']
 	)
+	// Slf4j
+	compile 'org.slf4j:slf4j-api:1.7.7'
 	// Spring
 	compile (
         [group: 'org.springframework', name: 'spring-core', version: '4.1.0.RELEASE'],
@@ -39,7 +41,6 @@ dependencies {
 	// Hibernate
 	compile (
 		[group:'org.hibernate', name:'hibernate-core', version:'4.3.6.Final'],
-		[group:'org.hibernate', name:'hibernate-annotations', version:'3.5.6-Final'],
 		[group:'org.hibernate', name:'hibernate-entitymanager', version:'4.3.6.Final']
 	)
 	// MySQL Driver

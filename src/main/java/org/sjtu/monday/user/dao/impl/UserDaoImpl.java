@@ -69,6 +69,7 @@ public class UserDaoImpl implements UserDao {
 	 * 
 	 * @see org.sjtu.monday.user.dao.UserDao#getUserList()
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<User> getUserList() {
 		return this.sessionFactory.getCurrentSession().createQuery("from user")
