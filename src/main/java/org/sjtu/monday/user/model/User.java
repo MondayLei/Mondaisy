@@ -84,4 +84,15 @@ public class User {
 		this.password = password;
 	}
 
+	/**
+	 * 
+	 */
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb = sb.append("UserId:").append(this.getUserId()).append(" UserName:")
+				.append(this.getUserName()).append(" UserPassword:")
+				.append(this.getPassword());
+		return sb.toString();
+	}
 }

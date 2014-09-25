@@ -54,5 +54,5 @@ dependencies {
 // Copy to webapp/lib
 task copyJars(type: Copy) {
   from configurations.runtime
-  into 'src/main/webapp/WEB-INF/lib' // Ä¿±êÎ»ÖÃ
+  into 'src/main/webapp/WEB-INF/lib' // Target location
 }

@@ -9,7 +9,7 @@
 			This class contains the user detail.
 		</meta>
 		<id name="userId" type="int" column="userId">
-			<generator class="native" />
+			<generator class="identity" />
 		</id>
 		<property name="userName" column="userName" type="string" />
 		<property name="password" column="password" type="string" />
